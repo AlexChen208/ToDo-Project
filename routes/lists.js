@@ -3,6 +3,6 @@ const router = express.Router()
 
 const listCtrl = require('../controllers/lists')
 
-router.post('/categories/:id/destinations', listCtrl.create)
+router.post('/categories/:id/lists', listCtrl.create)
 
 module.exports = router
