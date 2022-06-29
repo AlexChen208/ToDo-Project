@@ -16,7 +16,7 @@ router.get('/auth/google', passport.authenticate(
 router.get('/oauth2callback', passport.authenticate(
   'google',
   {
-    successRedirect : '/',
+    successRedirect : '/categories',
     failureRedirect : '/'
   }
 ));
@@ -26,5 +26,6 @@ router.get('/logout', function(req, res){
   req.logout();
   res.redirect('/');
 });
+
 
 module.exports = router;
