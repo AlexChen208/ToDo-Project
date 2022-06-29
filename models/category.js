@@ -22,7 +22,8 @@ const categoriesSchema = new Schema({
           let result = new Date(month, day);
           return result;
         }
-    }
+    },
+    lists: [listSchema]
 })
 
 
