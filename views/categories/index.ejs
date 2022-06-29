@@ -3,7 +3,7 @@
     <thead>
       <tr>
         <th>Category</th>
-        <th>Due Date</th>
+        <th>Deadline</th>
       </tr>
     </thead>
     <tbody>
@@ -12,6 +12,11 @@
               <td><%= category.title %></td>
               <td><%= category.dueDate %></td>
               <td><a href="/categories/<%= category._id %>">DETAILS</a></td>
+              <td>
+              <form action="/categories/<%=category._id%>?_method=DELETE" method="POST">
+                <button type="submit" class="btn btn-danger">Delete</button>
+              </form>
+            </td>
             </tr>
           <% }) %>
     </tbody>

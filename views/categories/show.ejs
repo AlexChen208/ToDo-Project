@@ -6,19 +6,18 @@
     </label>
     <input type="submit" value="Add To-Do Item">
 </form>
+
 <% if (category.lists.length) { %>
     <table>
-      <thead>
-        <tr>
-          <th>To-Do</th>
-        </tr>
-      </thead>
       <tbody>
+        <ul>
         <% category.lists.forEach(function(d) { %>
-          <tr>
-            <td><%= d.listItem %></td>
-          </tr>
+            <li><%= d.listItem %></li>
+            <form action="/categories/<%=d._id%>?_method=DELETE" method="POST">
+              <button type="submit" class="btn btn-danger">Delete</button>
+            </form>
         <% }); %>
+        </ul>
       </tbody>
     </table>
   <% } else { %>

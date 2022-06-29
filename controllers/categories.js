@@ -5,6 +5,7 @@ module.exports = {
     new: newCategory,
     create,
     show,
+    delete: deleteCategory,
 }
 
 function index(req, res) {
@@ -33,5 +34,11 @@ function create(req, res) {
             return res.redirect('/categories/new')
         }
         res.redirect('/categories/new')
+    })
+}
+
+function deleteCategory(req, res) {
+    Category.findByIdAndRemove(req.params.id, function(err, category) {
+        res.redirect('/categories')
     })
 }

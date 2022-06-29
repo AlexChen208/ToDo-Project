@@ -12,5 +12,7 @@ router.get('/',  isLoggedIn, categoriesCtrl.index)
 router.get('/:id', categoriesCtrl.show)
 // route to add data to home page
 router.post('/', isLoggedIn, categoriesCtrl.create)
+// route to delete
+router.delete('/:id', categoriesCtrl.delete)
 
 module.exports = router;

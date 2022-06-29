@@ -1,7 +1,8 @@
 const Category = require('../models/category')
 
 module.exports = {
-    create
+    create,
+    delete: deleteToDo,
 }
 
 function create(req, res) {
@@ -10,5 +11,11 @@ function create(req, res) {
         category.save(function(err) {
             res.redirect(`/categories/${category._id}`)
         })
+    })
+}
+
+function deleteToDo(req, res) {
+    Category.findByIdAndRemove(req.params.id, function(err, category) {
+        res.redirect(`${category._id}`)
     })
 }
