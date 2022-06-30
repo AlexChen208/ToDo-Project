@@ -17,6 +17,6 @@ router.delete('/:id', categoriesCtrl.delete)
 // route to edit
 router.get('/:id/edit', categoriesCtrl.edit)
 // update route
-
+router.put('/:id', categoriesCtrl.update)
 
 module.exports = router;
