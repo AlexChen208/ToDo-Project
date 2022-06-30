@@ -6,6 +6,8 @@ module.exports = {
     create,
     show,
     delete: deleteCategory,
+    edit,
+    // update
 }
 
 function index(req, res) {
@@ -38,7 +40,15 @@ function create(req, res) {
 }
 
 function deleteCategory(req, res) {
-    Category.findByIdAndRemove(req.params.id, function(err, category) {
+    Category.findByIdAndDelete(req.params.id, function(err, category) {
         res.redirect('/categories')
     })
 }
+
+function edit(req, res) {
+    Category.findById(req.params.id, function(err, category) {
+        res.render('categories/edit', {category})
+    })
+}
+
+

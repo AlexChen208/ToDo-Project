@@ -14,5 +14,9 @@ router.get('/:id', categoriesCtrl.show)
 router.post('/', isLoggedIn, categoriesCtrl.create)
 // route to delete
 router.delete('/:id', categoriesCtrl.delete)
+// route to edit
+router.get('/:id/edit', categoriesCtrl.edit)
+// update route
+
 
 module.exports = router;

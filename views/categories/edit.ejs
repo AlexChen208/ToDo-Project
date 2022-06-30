@@ -1,5 +1,5 @@
-<%- include("../partials/header.ejs")  %> 
-<h1>Create new Category</h1>
+<%- include("../partials/header")  %> 
+<h1>Edit Category</h1>
 <form action="/categories" method="POST" autocomplete="off">
     <label>Category Name:
         <input type="text" name="title">
@@ -7,6 +7,6 @@
     <label>Deadline:
         <input type="datetime-local" name="dueDate">
     </label><br>
-    <input type="submit" value="Add Category">
+    <input type="submit" value="Edit Category">
 </form>
-<%- include("../partials/footer.ejs")  %> 
+<%- include("../partials/footer")  %> 

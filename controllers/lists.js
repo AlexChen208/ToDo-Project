@@ -15,7 +15,8 @@ function create(req, res) {
 }
 
 function deleteToDo(req, res) {
-    Category.findByIdAndRemove(req.params.id, function(err, category) {
-        res.redirect(`${category._id}`)
-    })
+    // Find list item inside category 
+    // List.findByIdAndDelete(req.params.id, function(err, lists) {
+    //     res.redirect(`/categories/${category._id}`)
+    // })
 }
