@@ -4,7 +4,6 @@
 
 <img width="1440" alt="Screen Shot 2022-06-30 at 4 22 15 PM" src="https://user-images.githubusercontent.com/104876014/176794320-8bdcb460-4fe7-40d0-9482-dd407c80fce1.png">
 
-
 ### ERD: https://lucid.app/lucidchart/6b82deef-2864-4
 <img width="706" alt="Screen Shot 2022-06-30 at 4 11 23 PM" src="https://user-images.githubusercontent.com/104876014/176793348-76b0aba5-8800-4578-b395-8adb0243473b.png">
 
