@@ -17,11 +17,11 @@ Wireframe: https://www.figma.com/file/0owg2YPyoNNlqRq2MDBF7G/CRUD-APP?node-id=0%
 <img width="568" alt="Screen Shot 2022-06-30 at 4 08 11 PM" src="https://user-images.githubusercontent.com/104876014/176793100-4556a354-de3b-40df-96fe-f1c758203908.png">
 <img width="613" alt="Screen Shot 2022-06-30 at 4 08 24 PM" src="https://user-images.githubusercontent.com/104876014/176793102-151da75b-1541-4d00-9a8b-fcfc98039c1b.png">
 
-#Technologies Used:
+##Technologies Used:
 Node/Express/MongoDB
 
-#Getting Started:
+##Getting Started:
 https://to-do-tracker.herokuapp.com/
 
-#Next Steps:
+##Next Steps:
 Setting up an accomplishment alert when a certain amount of tasks are completed
