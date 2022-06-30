@@ -1,29 +1,30 @@
-<%- include("../partials/header") %> 
-<table class="table">
-  <a href="/categories/<%= category._id %>/edit">Edit Category</a>
-</table>
-<h1>To-Do's List</h1>
-<form action="/categories/<%= category._id %>/lists" method="POST" autocomplete="off">
-    <label>
+<%- include("../partials/header") %>
+  <div class="container text-center">
+    <div class="card-header">
+      <h1>To-Do's List</h1>
+      <a class="btn btn-primary" href="/categories/<%= category._id %>/edit" role="button">Edit Category</a>
+    </div>
+    <form action="categories/<%= category._id %>/lists" method="POST" autocomplete="off">
+      <label>
         <input type="text" name="listItem">
-    </label>
-    <input type="submit" value="Add To-Do Item">
-</form>
-
-<% if (category.lists.length) { %>
-    <table>
-      <tbody>
-        <ul>
-        <% category.lists.forEach(function(d) { %>
-            <li><%= d.listItem %></li>
-            <form action="/categories/<%=d._id%>?_method=DELETE" method="POST">
-              <button type="submit" class="btn btn-danger">Delete</button>
-            </form>
-        <% }); %>
+      </label>
+      <input type="submit" value="+">
+    </form>
+    <div class="card mx-auto" style="width: 18rem">
+      <% if (category.lists.length) { %>
+        <ul class="list-group list-group-flush">
+          <% category.lists.forEach(function(d) { %>
+            <li class="list-group-item">
+              <%= d.listItem %>
+                <form action="/categories/<%=category._id%>/lists/<%= d._id %>?_method=DELETE" method="POST">
+                  <button type="submit" class="btn btn-danger btn-primary btn-sm text-right">Delete</button>
+                </form>
+            </li>
+            <% }); %>
         </ul>
-      </tbody>
-    </table>
-  <% } else { %>
-    <h5>No To-Do's created yet!</h5>
-  <% } %>
-<%- include("../partials/footer") %> 
+        <% } else { %>
+          <h5>No To-Do's created yet!</h5>
+          <% } %>
+    </div>
+  </div>
+<%- include("../partials/footer") %>

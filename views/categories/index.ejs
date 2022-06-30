@@ -1,6 +1,5 @@
-<%- include("../partials/header")  %> 
-
-<table class="table">
+<%- include("../partials/header") %>
+  <table class="table">
     <thead>
       <tr>
         <th>Category</th>
@@ -8,18 +7,22 @@
       </tr>
     </thead>
     <tbody>
-        <% categories.forEach(function(category) { %>
-            <tr>
-              <td><%= category.title %></td>
-              <td><%= category.dueDate %></td>
-              <td><button class="btn btn-info"><a href="/categories/<%= category._id %>">Details</a></button></td>
-              <td>
-              <form action="/categories/<%=category._id%>?_method=DELETE" method="POST">
-                <button type="submit" class="btn btn-danger">Delete</button>
-              </form>
-            </td>
-            </tr>
-          <% }) %>
+      <% categories.forEach(function(category) { %>
+        <tr>
+          <td>
+            <%= category.title %>
+          </td>
+          <td>
+            <%= category.dueDate %>
+          </td>
+          <td><a class="btn btn-primary" href="/categories/<%= category._id %>" role="button">Details</a></td>
+          <td>
+            <form action="/categories/<%=category._id%>?_method=DELETE" method="POST">
+              <button type="submit" class="btn btn-danger">Delete</button>
+            </form>
+          </td>
+        </tr>
+        <% }) %>
     </tbody>
   </table>
-<%- include("../partials/footer")  %> 
+<%- include("../partials/footer") %>
