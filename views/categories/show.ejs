@@ -1,4 +1,7 @@
-<%- include("../partials/header")  %> 
+<%- include("../partials/header") %> 
+<table class="table">
+  <a href="/categories/<%= category._id %>/edit">Edit Category</a>
+</table>
 <h1>To-Do's List</h1>
 <form action="/categories/<%= category._id %>/lists" method="POST" autocomplete="off">
     <label>
@@ -23,6 +26,4 @@
   <% } else { %>
     <h5>No To-Do's created yet!</h5>
   <% } %>
-
-  <a href="/categories/<%= category._id %>/edit">Edit Category</a>
-<%- include("../partials/footer")  %> 
+<%- include("../partials/footer") %> 

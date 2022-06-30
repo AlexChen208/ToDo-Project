@@ -1,4 +1,5 @@
 <%- include("../partials/header")  %> 
+
 <table class="table">
     <thead>
       <tr>
@@ -11,7 +12,7 @@
             <tr>
               <td><%= category.title %></td>
               <td><%= category.dueDate %></td>
-              <td><a href="/categories/<%= category._id %>">DETAILS</a></td>
+              <td><button class="btn btn-info"><a href="/categories/<%= category._id %>">Details</a></button></td>
               <td>
               <form action="/categories/<%=category._id%>?_method=DELETE" method="POST">
                 <button type="submit" class="btn btn-danger">Delete</button>
