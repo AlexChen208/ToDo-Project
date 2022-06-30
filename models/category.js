@@ -16,7 +16,7 @@ const categoriesSchema = new Schema({
    dueDate: {
        type: Date,
        default: function() {
-         let d = new Date();
+         let d = new Date();    
          let month = d.getMonth();
          let day = d.getDate();
          let result = new Date(month, day);
