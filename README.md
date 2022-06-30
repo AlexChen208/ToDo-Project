@@ -1,6 +1,6 @@
 # ToDo-Project
 
-Description of App: Create a list to track what needs to be accomplished for the day!
+### Description of App: Create a list to track what needs to be accomplished for the day!
 
 <img width="1440" alt="Screen Shot 2022-06-30 at 4 22 15 PM" src="https://user-images.githubusercontent.com/104876014/176794320-8bdcb460-4fe7-40d0-9482-dd407c80fce1.png">
 
