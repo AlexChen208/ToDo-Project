@@ -4,7 +4,7 @@
       <h1>To-Do's List</h1>
       <a class="btn btn-primary" href="/categories/<%= category._id %>/edit" role="button">Edit Category</a>
     </div>
-    <form action="categories/<%= category._id %>/lists" method="POST" autocomplete="off">
+    <form action="/categories/<%=category._id%>/lists" method="POST" autocomplete="off">
       <label>
         <input type="text" name="listItem">
       </label>
@@ -16,7 +16,7 @@
           <% category.lists.forEach(function(d) { %>
             <li class="list-group-item">
               <%= d.listItem %>
-                <form action="/categories/<%=category._id%>/lists/<%= d._id %>?_method=DELETE" method="POST">
+                <form action="/categories/<%=category._id%>/lists/<%= d._id%>?_method=DELETE" method="POST">
                   <button type="submit" class="btn btn-danger btn-primary btn-sm text-right">Delete</button>
                 </form>
             </li>
