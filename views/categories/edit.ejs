@@ -1,6 +1,6 @@
 <%- include("../partials/header") %>
     <div class="text-center">
-        <h1>Edit Category</h1>
+        <h1>Edit <%=category.title%> Category's Name</h1>
     </div>
     <div class="m-4">
         <form action="/categories/<%= category._id %>?_method=PUT" method="POST" autocomplete="off">
