@@ -11,7 +11,7 @@ const listSchema = new Schema({
  
 const categoriesSchema = new Schema({
    title: {
-       type: String
+       type: String,
    },
    dueDate: {
        type: Date,
